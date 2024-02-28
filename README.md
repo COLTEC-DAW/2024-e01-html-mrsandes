@@ -1,4 +1,4 @@
-# Exercícios: Elementos HTML
+# Lista: HTML
 
 * Desenvolvimento de Aplicações Web
 * COLTEC/UFMG
@@ -9,12 +9,17 @@
 Para realização e entrega dos exercícios, siga as instruções disponíveis na página da disciplina.
 Para cada questão, gere um commit específico!!
 
-## T1: Notícia do dia
+## T1: Sobre Mim
 
-Implemente a página HTML `noticia.html` que contenha uma notícia do dia. Essa página deverá conter um título, subtítulo, e pelo menos quatro parágrafos, representando o texto da notícia.
+Implemente a página HTML `about-me.html` que que fale rapidamente sobre você! Essa página deverá conter um título, e pelo dois parágrafos. Fale sobre você e sobre seu passatempo.
 
-Dica: utilize as tags `<h1>`, `<h2>` e `<p>` para implementação da página.
+### O que será verificado?
 
+- Se o arquivo da página foi criado com o nome correto.
+- Se a página possui um título principal.
+- Se a página possui dois parágrafos.
+
+<!-- 
 ## T2: Prova de Múltipla Escolha
 
 Elabore uma lista de exercícios com cinco questões de múltipla escolha, que aborda qualquer um dos temas já vistos anteriormente no curso.
@@ -35,4 +40,4 @@ Dica: utilize as tags `<table>`, `<tr>`, `<td>`.
 
 Crie um arquivo `formulario.html` e implemente um formulário HTML conforme a imagem a seguir:
 
-![Formulário](form.png)
+![Formulário](form.png) -->
