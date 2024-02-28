@@ -38,7 +38,7 @@ jobs:
           # build: npm --prefix ${{ github.workspace }}/.github/actions/html-elements install
           # start: npm --prefix ${{ github.workspace }}/.github/actions/html-elements start
           wait-on: "http://localhost:8080"
-          working-directory: ${{ github.workspace }}/.github/actions/html-elements
+          working-directory: .github/actions/html-elements
           config-file: cypress.config.js
       
       # - name: Report Full
