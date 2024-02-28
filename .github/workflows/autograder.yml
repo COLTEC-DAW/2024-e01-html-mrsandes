@@ -24,21 +24,22 @@ jobs:
       - name: Checkout 
         uses: actions/checkout@v2
   
-      # - name: Configuração das dependências
-      #   run: npm --prefix ${{ github.workspace }}/.github/actions/html-elements install
+      - name: Configuração das dependências
+        run: npm --prefix ${{ github.workspace }}/.github/actions/html-elements install
 
-      # - name: Test
-      #   run: npm --prefix ${{ github.workspace }}/.github/actions/html-elements test
+      - name: Inicialização do servidor
+        run: npm --prefix ${{ github.workspace }}/.github/actions/html-elements start &
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
           project: ${{github.workspace}}
           browser: chrome
-          build: npm --prefix ${{ github.workspace }}/.github/actions/html-elements install
-          start: npm --prefix ${{ github.workspace }}/.github/actions/html-elements start
+          # build: npm --prefix ${{ github.workspace }}/.github/actions/html-elements install
+          # start: npm --prefix ${{ github.workspace }}/.github/actions/html-elements start
           wait-on: "http://localhost:8080"
-          config-file: ${{ github.workspace }}/.github/actions/html-elements/cypress.config.js
+          working-directory: ${{ github.workspace }}/.github/actions/html-elements
+          config-file: cypress.config.js
       
       # - name: Report Full
       #   uses: dorny/test-reporter@v1
