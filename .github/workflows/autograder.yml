@@ -66,4 +66,4 @@ jobs:
           create_if_not_exists: true
           message: |
             Olá jovem! Aqui está sua correção, Beep! 🤖
-        if: github.event_name == 'pull_request' && github.ref == 'refs/heads/feedback'
+        if: github.event_name == 'pull_request'
