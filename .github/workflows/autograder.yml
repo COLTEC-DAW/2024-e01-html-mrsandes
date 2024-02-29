@@ -58,7 +58,7 @@ jobs:
           show: "all"
         if: always()
 
-      - run: echo -e "Olá jovem! Aqui está sua correção, Beep! 🤖\n$(cat ${{ env.CYPRESS_PATH }}/cypress/reports/summary.md)" > ${{ env.CYPRESS_PATH }}/cypress/reports/summary.md
+      - run: echo -e "<strong>Olá jovem! Aqui está sua correção, Beep! 🤖</strong>\n\n$(cat ${{ env.CYPRESS_PATH }}/cypress/reports/summary.md)" > ${{ env.CYPRESS_PATH }}/cypress/reports/summary.md
 
       - name: Pull Request Comment
         uses: thollander/actions-comment-pull-request@v2
