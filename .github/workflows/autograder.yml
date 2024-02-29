@@ -4,9 +4,6 @@ on:
   pull_request:
     types: [opened, synchronize]
   workflow_dispatch:
-  push:
-    branches:
-      - master
   
 
 permissions:
@@ -66,62 +63,7 @@ jobs:
         with:
           filePath: "${{ env.CYPRESS_PATH }}/cypress/reports/summary.md"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        if: always()
-
-
-# name: Correção
-
-# on:
-#   pull_request:
-#     types: [synchronize, opened, reopened ]
-
-# env:
-#   FILES_PATH: ${{ github.workspace }}
-
-# jobs:
-#   setup:
-#     name: Setup do projeto
-#     runs-on: ubuntu-latest
-
-#     steps: 
-#       - name: Checkout do repositório
-#         uses: actions/checkout@v2
-
-#       - name: Preparação do ambiente
-#         uses: actions/setup-node@v2
-#         with:
-#           node-version: 16.x
-
-#       - name: Configuração das dependências
-#         run: npm --prefix ${{ github.workspace }}/.github/actions/html-elements install
-
-#       - name: Caching do projeto
-#         uses: actions/cache@v2
-#         with:
-#           path: |
-#             ${{ env.FILES_PATH }}/*.html
-#             ${{ github.workspace }}/.github/actions/html-elements/
-#           key: ${{ runner.os }}-${{ github.run_id }}  
-
-#   grading-html-elements:
-#     name: "Exercício: Elementos HTML"
-#     needs: setup
-#     runs-on: ubuntu-latest
-#     strategy:
-#       matrix:
-#         task: [ "T1", "T2", "T3", "T4" ]
-
-
-#     steps:
-#       - name: Caching do projeto
-#         uses: actions/cache@v2
-#         with:
-#           path: |
-#             ${{ env.FILES_PATH }}/*.html
-#             ${{ github.workspace }}/.github/actions/html-elements/
-#           key: ${{ runner.os }}-${{ github.run_id }}  
-
-#       - name: "${{ matrix.task }}"
-#         if: ${{ always() }}
-#         run: npm --prefix ${{ github.workspace }}/.github/actions/html-elements test -- -t "${{ matrix.task }}"
-    
+          create_if_not_exists: true
+          message: |
+            Olá jovem! Aqui está sua correção, Beep! 🤖
+        if: github.event_name == 'pull_request' && github.ref == 'refs/heads/feedback'
