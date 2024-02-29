@@ -58,12 +58,12 @@ jobs:
           show: "all"
         if: always()
 
+      - run: echo -e "Olá jovem! Aqui está sua correção, Beep! 🤖\n$(cat ${{ env.CYPRESS_PATH }}/cypress/reports/summary.md)" > ${{ env.CYPRESS_PATH }}/cypress/reports/summary.md
+
       - name: Pull Request Comment
         uses: thollander/actions-comment-pull-request@v2
         with:
           filePath: "${{ env.CYPRESS_PATH }}/cypress/reports/summary.md"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           create_if_not_exists: true
-          message: |
-            Olá jovem! Aqui está sua correção, Beep! 🤖
         if: github.event_name == 'pull_request'
