@@ -19,6 +19,45 @@ Implemente a página HTML `about-me.html` que que fale rapidamente sobre você! 
 - Se a página possui um título principal.
 - Se a página possui dois parágrafos.
 
+
+## T2: Elementos Textuais
+
+Implemente a página HTML `noticia.html` que contenha uma notícia do dia. Essa página deverá conter:
+
+1. Título principal
+2. Subtítulo descrevendo a notícia em mais detalhes
+3. Pelo menos quatro parágrafos contendo o texto da notícia
+4. A aplicação de pelo menos 6 elementos de formatação (negrito, itálico ou links)
+
+### O que será verificado?
+
+- Se a o arquivo da página foi criado com o nome correto.
+- Se a página possui os títulos e subtítulos.
+- Se a página possui pelo menos quatro parágrafos.
+- Se a página possui pelo menos 6 elementos de formatação.
+
+
+## T3: Sistema Solar
+
+Imagine que você é um cientista espacial entusiasmado e decidiu criar uma página HTML interativa para compartilhar informações sobre os planetas do nosso sistema solar. Seu objetivo é implementar uma página web usando os elementos que viu até o momento. A página, que deverá se chamar `sistema-solar.html`, deve atender aos seguintes requisitos:
+
+1. **Cabeçalho (Header):**
+    - Um título principal (por exemplo, "Explorando os Planetas").
+    - Um subtítulo que descreve brevemente o propósito da página.
+2. **Seção Principal (Main):**
+    - Uma série de elementos `<section>`, cada um dedicado a um planeta específico do sistema solar. Cada seção deverá conter pelo menos: um título com o nome do planeta, um parágrafo descrevendo as características do planeta.
+3. **Rodapé (Footer):**
+    - Informações de contato, como um endereço de e-mail ou um link para suas redes sociais, para que os visitantes possam compartilhar feedback ou fazer perguntas.
+
+### O que será verificado
+
+- Se o arquivo da página foi criado com o nome correto.
+- Se a página possui um cabeçalho, uma seção principal, e um rodapé
+- Se o cabeçalho possui um título principal e um subtítulo
+- Se a seção principal possui pelo menos 8 elementos `<section>`, cada um dedicado a um planeta específico do sistema solar
+- Se cada seção possui um título com o nome do planeta e um parágrafo descrevendo as características do planeta
+- Se o rodapé possui um link para e-mail, e um link para redes sociais.
+
 <!-- 
 ## T2: Prova de Múltipla Escolha
 
